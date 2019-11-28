@@ -11,9 +11,7 @@ import (
 	"gin-demo/initRouter"
 )
 
-/*
-https://youngxhui.top/2019/07/gin%E4%B8%80hello/
-*/
+//https://youngxhui.top/2019/07/gin%E4%BA%8C%E8%B7%AF%E7%94%B1/
 
 func main() {
 	router := initRouter.SetupRouter()
