@@ -7,12 +7,16 @@
 
 package main
 
+import (
+	"gin-demo/initRouter"
+)
 
-import "github.com/gin-gonic/gin"
+/*
+https://youngxhui.top/2019/07/gin%E4%B8%80hello/
+*/
 
-func main()  {
-	router := gin.Default()
-	router.Run()
+func main() {
+	router := initRouter.SetupRouter()
+	_ = router.Run()
+
 }
-
-
