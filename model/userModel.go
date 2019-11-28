@@ -8,14 +8,16 @@
 package model
 
 import (
+	"database/sql"
 	"gin-demo/initDB"
 	"log"
 )
 
 type UserModel struct {
-	Id       int64  `form:"id"`
-	Email    string `form:"email" binding:"email"`
-	Password string `form:"password" `
+	Id       int            `form:"id"`
+	Email    string         `form:"email" binding:"email"`
+	Password string         `form:"password" `
+	Avatar   sql.NullString `form:"avatar"`
 }
 
 func (user *UserModel) Save() int64 {
@@ -38,4 +40,26 @@ func (user *UserModel) QueryByEmail() UserModel {
 		log.Panicln(e)
 	}
 	return u
+}
+
+func (user *UserModel) QueryById(id int) (UserModel, error) {
+	u := UserModel{}
+	row := initDB.Db.QueryRow("select * from user where id = ?;", id)
+	e := row.Scan(&u.Id, &u.Email, &u.Password, &u.Avatar)
+	if e != nil {
+		log.Println(e)
+	}
+	return u, e
+}
+
+func (user *UserModel) Update(id int) error {
+	var stmt, e = initDB.Db.Prepare("update user set password=?,avatar=?  where id=? ")
+	if e != nil {
+		log.Println("发生了错误", e.Error())
+	}
+	_, e = stmt.Exec(user.Password, user.Avatar.String, user.Id)
+	if e != nil {
+		log.Panicln("错误 e", e.Error())
+	}
+	return e
 }
