@@ -19,7 +19,7 @@ func SetupRouter() *gin.Engine {
 	router := gin.New()
 
 	//添加自定义的logger中间件
-	router.Use(middleware.Logger(), gin.Recovery())
+	router.Use(gin.Logger(), gin.Recovery())
 
 	if mode := gin.Mode(); mode == gin.TestMode {
 		router.LoadHTMLGlob("./../templates/*")
