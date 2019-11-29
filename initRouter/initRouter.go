@@ -8,29 +8,25 @@
 package initRouter
 
 import (
-	"gin-demo/handler"
+	"gin-demo/handler/article"
 	"github.com/gin-gonic/gin"
-	"net/http"
-	"strings"
 )
 
 func SetupRouter() *gin.Engine {
 	router := gin.Default()
 
-	index := router.Group("/")
+	articleRouter := router.Group("")
 	{
-		index.Any("", retHelloGinAndMethod)
+		// 通过获取单篇文章
+		articleRouter.GET("/article/:id", article.GetOne)
+		// 获取所有文章
+		articleRouter.GET("/articles", article.GetAll)
+		// 添加一篇文章
+		articleRouter.POST("/article", article.Insert)
+		articleRouter.DELETE("/article/:id", article.DeleteOne)
+
 	}
-	// 添加 user
-	userRouter := router.Group("/user")
-	{
-		userRouter.GET("/:name", handler.UserSave)
-		userRouter.GET("", handler.UserSaveByQuery)
-	}
+
 	return router
 
-}
-
-func retHelloGinAndMethod(context *gin.Context) {
-	context.String(http.StatusOK, "hello gin "+strings.ToLower(context.Request.Method)+" method")
 }
