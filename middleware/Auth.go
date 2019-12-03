@@ -12,6 +12,7 @@ import (
 	"github.com/dgrijalva/jwt-go"
 	"github.com/gin-gonic/gin"
 	"net/http"
+	"strconv"
 	"strings"
 )
 
@@ -45,9 +46,35 @@ func Auth() gin.HandlerFunc {
 }
 
 func parseToken(token string) (*jwt.StandardClaims, error) {
-	jwtToken, err := jwt.ParseWithClaims(token, &jwt.StandardClaims{}, func(token *jwt.Token) (i interface{}, e error) {
-		return []byte(config.Secret), nil
-	})
+
+	// 分割出来载体
+	payload := strings.Split(token, ".")
+	bytes, e := jwt.DecodeSegment(payload[1])
+
+	if e != nil {
+		println(e.Error())
+	}
+	content := ""
+	for i := 0; i < len(bytes); i++ {
+		content += string(bytes[i])
+	}
+	split := strings.Split(content, ",")
+	id := strings.SplitAfter(split[2], ":")
+	i := strings.Split(id[1], "\\u")
+	i = strings.Split(i[1], "\"")
+
+	ID, err := strconv.Atoi(i[0])
+	if err != nil {
+		println(err.Error())
+	}
+
+	user := model.User{}
+	user.ID = uint(ID)
+	u := model.User.QueryById(user)
+	jwtToken, err := jwt.ParseWithClaims(token, &jwt.StandardClaims{},
+		func(token *jwt.Token) (i interface{}, e error) {
+			return []byte(config.Secret + u.Password), nil
+		})
 	if err == nil && jwtToken != nil {
 		if claim, ok := jwtToken.Claims.(*jwt.StandardClaims); ok && jwtToken.Valid {
 			return claim, nil

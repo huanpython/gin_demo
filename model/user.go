@@ -25,7 +25,7 @@ func init() {
 }
 
 func (user User) QueryByUsername() User {
-	initDB.Db.First(&user, user.Username)
+	initDB.Db.Where("username = ?", user.Username).First(&user)
 	return user
 }
 
@@ -36,4 +36,9 @@ func (user User) Insert() bool {
 		return true
 	}
 	return false
+}
+
+func (user User) QueryById() User {
+	initDB.Db.First(&user)
+	return user
 }

@@ -1,5 +1,135 @@
 GET http://localhost:8080
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJ5b3VuZ3hodWkiLCJleHAiOjE1NzIyNTk4NjcsImp0aSI6Ilx1MDAwNSIsImlhdCI6MTU3MjE3MzQ2NywiaXNzIjoiZ2luIGhlbGxvIiwibmJmIjoxNTcyMTczNDY3LCJzdWIiOiJsb2dpbiJ9.p4VC-Y-Xc6Bhi_Ae6r2KSCayEs6gd0vzPtstWuy43Vs
+
+<> 2019-12-03T053006.401.json
+
+###
+
+POST http://localhost:8080/register
+Content-Type: application/json
+
+{
+  "username": "youngxhui",
+  "password": "12qw"
+}
+
+<> 2019-12-03T053003.200.json
+
+###
+
+GET http://localhost:8080/login
+Content-Type: application/json
+
+{
+  "username": "youngxhui",
+  "password": "12qw"
+}
+
+<> 2019-12-03T052951.200.json
+
+###
+
+GET http://localhost:8080/login
+Content-Type: application/json
+
+{
+  "username": "youngxhui",
+  "password": "12qw"
+}
+
+<> 2019-12-03T052846.200.json
+
+###
+
+GET http://localhost:8080
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJ5b3VuZ3hodWkiLCJleHAiOjE1NzIyNTk4NjcsImp0aSI6Ilx1MDAwNSIsImlhdCI6MTU3MjE3MzQ2NywiaXNzIjoiZ2luIGhlbGxvIiwibmJmIjoxNTcyMTczNDY3LCJzdWIiOiJsb2dpbiJ9.p4VC-Y-Xc6Bhi_Ae6r2KSCayEs6gd0vzPtstWuy43Vs
+
+<> 2019-12-03T052623.401.json
+
+###
+
+GET http://localhost:8080/login
+Content-Type: application/json
+
+{
+  "username": "youngxhui",
+  "password": "12qw"
+}
+
+<> 2019-12-03T052619.200.json
+
+###
+
+POST http://localhost:8080/register
+Content-Type: application/json
+
+{
+  "username": "youngxhui",
+  "password": "12qw"
+}
+
+<> 2019-12-03T052433.200.json
+
+###
+
+GET http://localhost:8080/login
+Content-Type: application/json
+
+{
+  "username": "youngxhui",
+  "password": "12qw"
+}
+
+<> 2019-12-03T052429.200.json
+
+###
+
+GET http://localhost:8080/login
+Content-Type: application/json
+
+{
+  "username": "youngxhui",
+  "password": "12qw"
+}
+
+<> 2019-12-03T052335.200.json
+
+###
+
+GET http://localhost:8080
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJ5b3VuZ3hodWkiLCJleHAiOjE1NzIyNTk4NjcsImp0aSI6Ilx1MDAwNSIsImlhdCI6MTU3MjE3MzQ2NywiaXNzIjoiZ2luIGhlbGxvIiwibmJmIjoxNTcyMTczNDY3LCJzdWIiOiJsb2dpbiJ9.p4VC-Y-Xc6Bhi_Ae6r2KSCayEs6gd0vzPtstWuy43Vs
+
+###
+
+POST http://localhost:8080/register
+Content-Type: application/json
+
+{
+  "username": "youngxhui",
+  "password": "12qw"
+}
+
+<> 2019-12-03T052325.200.json
+
+###
+
+GET http://localhost:8080/login
+Content-Type: application/json
+
+{
+  "username": "youngxhui",
+  "password": "12qw"
+}
+
+<> 2019-12-03T052320.200.json
+
+###
+
+GET http://localhost:8080
+Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiIxMjMiLCJleHAiOjE1NzU0NDIyMzQsImp0aSI6Ilx1MDAwMCIsImlhdCI6MTU3NTM1NTgzNCwiaXNzIjoiZ2luIGhlbGxvIiwibmJmIjoxNTc1MzU1ODM0LCJzdWIiOiJsb2dpbiJ9.7WFERlrPNf9rvlC-YcNlrdlS00jLFwTG7cgYXYwHtso
 
 <> 2019-12-03T025316.200.json
