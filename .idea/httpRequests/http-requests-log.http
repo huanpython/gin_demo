@@ -1,3 +1,135 @@
+GET http://localhost:8080
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiIxMjMiLCJleHAiOjE1NzU0NDIyMzQsImp0aSI6Ilx1MDAwMCIsImlhdCI6MTU3NTM1NTgzNCwiaXNzIjoiZ2luIGhlbGxvIiwibmJmIjoxNTc1MzU1ODM0LCJzdWIiOiJsb2dpbiJ9.7WFERlrPNf9rvlC-YcNlrdlS00jLFwTG7cgYXYwHtso
+
+<> 2019-12-03T025316.200.json
+
+###
+
+POST http://localhost:8080/register
+Content-Type: application/json
+
+{
+  "username": "123",
+  "password": "Hello Go"
+}
+
+<> 2019-12-03T025314.200.json
+
+###
+
+GET http://localhost:8080/login
+Content-Type: application/json
+
+{
+  "username": "123",
+  "password": "Hello Go"
+}
+
+<> 2019-12-03T025309.200.json
+
+###
+
+GET http://localhost:8080
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiIxMjMiLCJleHAiOjE1NzU0NDIyMzQsImp0aSI6Ilx1MDAwMCIsImlhdCI6MTU3NTM1NTgzNCwiaXNzIjoiZ2luIGhlbGxvIiwibmJmIjoxNTc1MzU1ODM0LCJzdWIiOiJsb2dpbiJ9.7WFERlrPNf9rvlC-YcNlrdlS00jLFwTG7cgYXYwHtso
+
+<> 2019-12-03T025054.200.json
+
+###
+
+GET http://localhost:8080/login
+Content-Type: application/json
+
+{
+  "username": "123",
+  "password": "Hello Go"
+}
+
+<> 2019-12-03T025034.200.json
+
+###
+
+POST http://localhost:8080/register
+Content-Type: application/json
+
+{
+  "username": "123",
+  "password": "Hello Go"
+}
+
+<> 2019-12-03T025027.200.json
+
+###
+
+GET http://localhost:8080/login
+Content-Type: application/json
+
+{
+  "username": "123",
+  "password": "Hello Go"
+}
+
+<> 2019-12-03T025023.200.json
+
+###
+
+POST http://localhost:8080/register
+Content-Type: application/json
+
+{
+  "username": "123",
+  "password": "Hello Go"
+}
+
+<> 2019-12-03T024921.200.json
+
+###
+
+GET http://localhost:8080/login
+Content-Type: application/json
+
+{
+  "username": "123",
+  "password": "Hello Go"
+}
+
+<> 2019-12-03T024910.200.json
+
+###
+
+GET http://localhost:8080
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJhbGwiLCJleHAiOjE1NjQ4NDEzNjUsImp0aSI6Ilx1MDAwMCIsImlhdCI6MTU2NDc1NDk2NSwiaXNzIjoiZ2luIGhlbGxvIiwibmJmIjoxNTY0NzU0OTY1LCJzdWIiOiJsb2dpbiJ9.V9230Piv2MnoE99qqmYpK0-ZJa4ewmOimMbGsUYkJmA
+
+<> 2019-12-03T020255.401.json
+
+###
+
+POST http://localhost:8080/register
+Content-Type: application/json
+
+{
+  "username": "123",
+  "password": "Hello Go"
+}
+
+<> 2019-12-03T020252.200.json
+
+###
+
+GET http://localhost:8080/login
+Content-Type: application/json
+
+{
+  "username": "123",
+  "password": "Hello Go"
+}
+
+<> 2019-12-03T020248.200.json
+
+###
+
 POST http://localhost:8080/article
 Content-Type: application/json
 
