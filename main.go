@@ -8,10 +8,22 @@
 package main
 
 import (
+	_ "gin-demo/docs"
 	"gin-demo/initRouter"
 )
 
-//https://youngxhui.top/2019/07/gin%E4%B9%9D%E7%94%9F%E6%88%90restful%E6%8E%A5%E5%8F%A3/
+// @title Gin swagger
+// @version 1.0
+// @description Gin swagger 示例项目
+
+// @contact.name youngxhu
+// @contact.url https://youngxhui.top
+// @contact.email youngxhui@g mail.com
+
+// @license.name Apache 2.0
+// @license.url http://www.apache.org/licenses/LICENSE-2.0.html
+
+// @host localhost:8080
 
 func main() {
 	router := initRouter.SetupRouter()

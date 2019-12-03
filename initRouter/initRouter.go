@@ -10,6 +10,8 @@ package initRouter
 import (
 	"gin-demo/handler/article"
 	"github.com/gin-gonic/gin"
+	swaggerFiles "github.com/swaggo/files"
+	ginSwagger "github.com/swaggo/gin-swagger"
 )
 
 func SetupRouter() *gin.Engine {
@@ -26,6 +28,8 @@ func SetupRouter() *gin.Engine {
 		articleRouter.DELETE("/article/:id", article.DeleteOne)
 
 	}
+	url := ginSwagger.URL("http://localhost:8080/swagger/doc.json")
+	router.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerFiles.Handler, url))
 
 	return router
 
